@@ -1,0 +1,32 @@
+{
+  "name": "cdmx20181-track-fe-themovieapi",
+  "version": "1.0.0",
+  "description": "extrae y pinta peliculas",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MirEnovi/cdmx20181-Track-FE-themovieapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MirEnovi/cdmx20181-Track-FE-themovieapi/issues"
+  },
+  "homepage": "https://github.com/MirEnovi/cdmx20181-Track-FE-themovieapi#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.4.0",
+    "htmlhint": "^0.9.13",
+    "materialize-social": "^1.0.3",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "opener": "^1.5.0",
+    "server": "^1.0.18"
+  }
+}
