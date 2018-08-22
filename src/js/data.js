@@ -1,9 +1,4 @@
 // alert('hola');
-const title = document.getElementById('titulo');
-const batman = document.getElementById('batman');
-const superman = document.getElementById('superman');
-const wonderWoman = document.getElementById('wonder-woman');
-
 /* funcion que se hizo en caso de un boton de busqueda*/
 // window.filterTitle = (title) => {
 //   let stringModif = '';
@@ -27,17 +22,33 @@ window.getApi = (string) => {
     .then(resp => resp.json())
     .then((data) => {
       let movies = getMovie(data);
+      window.drawCard(movies);
     });
 };
-// search.addEventListener('click', (event) => {
-//   filterTitle(title.value);
-// });
-batman.addEventListener('click', (event) => {
-  getApi('batman');
-});
-superman.addEventListener('click', (event) => {
-  getApi('superman');
-});
 
 window.getMovie = (data) => {
+  // console.log(data.Search);
+  let movie = data.Search;
+  let movieArr = [];
+  let movieObj = {};
+  for (let i = 0; i < movie.length; i++) {
+    let title = movie[i].Title;
+    let poster = movie[i].Poster;
+    let type = movie[i].Type;
+    let year = movie[i].Year;
+    let id = movie[i].imdbID;
+
+    movieObj = {
+      title,
+      poster,
+      type,
+      year,
+      id
+    };
+
+    movieArr.push(movieObj);
+  }; 
+  return movieArr;
 };
+
+
