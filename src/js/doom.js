@@ -3,6 +3,7 @@ const batman = document.getElementById('batman');
 const superman = document.getElementById('superman');
 const wonderWoman = document.getElementById('wonder-woman');
 const cardMovie = document.getElementById('card-movie');
+const exit = document.getElementById('exit');
 
 window.drawCard = (movies) => {
   cardMovie.innerHTML = '';
@@ -60,3 +61,10 @@ wonderWoman.addEventListener('click', (event) => {
 });
 
 // imgInfo.addEventListener('click', (event) => alert('hola'));
+
+const outUser = () => {
+  firebase.auth().signOut();
+  location.href = 'login.html';
+};
+
+exit.addEventListener('click', outUser);
