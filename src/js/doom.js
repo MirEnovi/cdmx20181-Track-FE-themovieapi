@@ -10,7 +10,7 @@ window.drawCard = (movies) => {
   cardMovie.innerHTML = '';
   for (let i = 0; i < movies.length; i++) {
     cardMovie.innerHTML +=
-      `<div class="card col-3 offset-1" style="width: 18rem;">
+      `<div id="card-color" class="card offset-md-1 col-12 col-md-5 col-lg-3" style="width: 18rem;">
       <img data-toggle="modal" href ="#modal${movies[i].id}" class="card-img-top" src="${movies[i].poster}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">${movies[i].title}</h5>
@@ -41,12 +41,6 @@ window.drawCard = (movies) => {
     `;
   }
 };
-// const imgInfo = document.getElementsByTagName('');
-
-// window.modal = () => {
-//   alert('hola');
-// };
-
 
 batman.addEventListener('click', (event) => {
   let string = 'batman';
@@ -60,8 +54,6 @@ wonderWoman.addEventListener('click', (event) => {
   let string = 'wonder+woman ';
   getApi(string);
 });
-
-// imgInfo.addEventListener('click', (event) => alert('hola'));
 
 const outUser = () => {
   firebase.auth().signOut();
