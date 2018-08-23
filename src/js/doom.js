@@ -4,6 +4,7 @@ const superman = document.getElementById('superman');
 const wonderWoman = document.getElementById('wonder-woman');
 const cardMovie = document.getElementById('card-movie');
 const exit = document.getElementById('exit');
+const name = document.getElementById('name');
 
 window.drawCard = (movies) => {
   cardMovie.innerHTML = '';
@@ -64,7 +65,35 @@ wonderWoman.addEventListener('click', (event) => {
 
 const outUser = () => {
   firebase.auth().signOut();
-  location.href = 'login.html';
+  location.href = '../login.html';
 };
-
 exit.addEventListener('click', outUser);
+
+
+const observador = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log(user);
+      
+      // User is signed in.
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      nameUser(displayName);
+
+      // ...
+    } else {
+      // User is signed out.
+      // ...
+    }
+  });
+};
+observador();
+
+window.nameUser = (nameU) => {
+  name.innerHTML = nameU;
+};
