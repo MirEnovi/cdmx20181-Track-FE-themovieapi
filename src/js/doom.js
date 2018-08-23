@@ -65,7 +65,7 @@ exit.addEventListener('click', outUser);
 const observador = () => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      console.log(user);
+      // console.log(user);
       
       // User is signed in.
       var displayName = user.displayName;
