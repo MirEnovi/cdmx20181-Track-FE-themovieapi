@@ -13,6 +13,13 @@
 //   }
 //   return getApi(stringModif);
 // };
+// const user = firebase.auth().currentUser;
+
+// if (user) {
+//   // User is signed in.
+// } else {
+//   // No user is signed in.
+// }
 
 window.getApi = (string) => {
   let urlAkey = 'http://www.omdbapi.com/?apikey=9faaab64&';
