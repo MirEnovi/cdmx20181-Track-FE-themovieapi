@@ -22,7 +22,7 @@
 // }
 
 window.getApi = (string) => {
-  let urlAkey = 'http://www.omdbapi.com/?apikey=9faaab64&';
+  let urlAkey = 'https://www.omdbapi.com/?apikey=9faaab64&';
 
   let url = `${urlAkey}s=${string}`;
   fetch(url)
