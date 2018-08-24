@@ -7,7 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslintinit": "eslint --init", 
+    "eslint": "eslint --ext .js src/",
+    "htmlhint": "htmlhint --ext .html src/"
   },
   "repository": {
     "type": "git",
