@@ -17,7 +17,7 @@
   <div class="container">
     <header>
       <h1 class="row">
-        Peliculas Info Blog
+        Tu Blog de Peliculas
       </h1>
       <h3 id="name" class="row"></h3>
       <button id="exit" type="button" class="offset-lg-9 col-lg-3 col btn btn-outline-dark">
@@ -26,15 +26,17 @@
     </header>
     <hr>
     <main class="row">
-      <section class="col-lg-6 offset-lg-3 offset-sm-3 col-sm-8 ustify-content-center">
-        <label>
-            Introduce un tipo de pelicula
-        </label>
-        <input id = "titulo" type="text">
-        <button id = "search" type="button" class="btn btn-outline-dark">
-            buscar
-          </button>
-        <button  id="batman" type="button" class="btn btn-outline-dark">
+        <section class="col-lg-6 offset-lg-3 offset-sm-3 col-sm-8 justify-content-center">
+      <label class="col-3">
+        Introduce un Titulo
+      </label>
+      <input id="titulo" class="col-4" type="text">
+      <button id="search" type="button" class="btn btn-outline-dark col-3">
+        buscar
+      </button>
+        </section>
+      <section class="col-lg-6 offset-lg-3 offset-sm-3 col-sm-8 justify-content-center">
+        <button id="batman" type="button" class="btn btn-outline-dark">
           batman
         </button>
         <button id="superman" type="button" class="btn btn-outline-dark">
@@ -47,7 +49,7 @@
 
       <section class="row">
         <div id="card-movie" class="d-flex 
-        align-content-stretch flex-wrap justify-content-start">
+        align-content-stretch flex-wrap col-12">
         </div>
       </section>
     </main>

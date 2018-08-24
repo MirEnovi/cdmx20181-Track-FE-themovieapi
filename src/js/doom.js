@@ -1,4 +1,5 @@
 const title = document.getElementById('titulo');
+const search = document.getElementById('search');
 const batman = document.getElementById('batman');
 const superman = document.getElementById('superman');
 const wonderWoman = document.getElementById('wonder-woman');
@@ -10,8 +11,8 @@ window.drawCard = (movies) => {
   cardMovie.innerHTML = '';
   for (let i = 0; i < movies.length; i++) {
     cardMovie.innerHTML +=
-      `<div id="card-color" class="card offset-md-1 col-12 col-md-5 col-lg-3" style="width: 18rem;">
-      <img data-toggle="modal" href ="#modal${movies[i].id}" class="card-img-top" src="${movies[i].poster}" alt="Card image cap">
+      `<div id="card-color" class="card" style="width: 18rem;">
+      <img data-toggle="modal" href ="#modal${movies[i].id}" class="card-img-top img-size" src="${movies[i].poster}" alt="${movies[i].title}">
       <div class="card-body">
         <h5 class="card-title">${movies[i].title}</h5>
       </div>
@@ -27,10 +28,10 @@ window.drawCard = (movies) => {
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img class="img-thumbnail rounded mx-auto d-block" src="${movies[i].poster}" alt="Card image cap">
                     <p>${movies[i].title}</p>
                     <p>${movies[i].year}</p>
                     <p>${movies[i].type}</p>
+                    <img class="img-thumbnail rounded mx-auto d-block" src="${movies[i].poster}" alt="${movies[i].title}">
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -53,6 +54,10 @@ superman.addEventListener('click', (event) => {
 wonderWoman.addEventListener('click', (event) => {
   let string = 'wonder+woman ';
   getApi(string);
+});
+
+search.addEventListener('click', (event) => {
+  filterTitle(title.value);
 });
 
 const outUser = () => {

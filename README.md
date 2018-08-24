@@ -1,7 +1,21 @@
 # Caso de estudio: API Movies
+## Blog de Peliculas
 
-## Descripción
+### Descripción
+Este blog personal tiene el objetivo de mostrar una seriede tarjetas de peliculas. En estas se pueden ver el poster de la pelicula en cuestión, ademas de su nombre. Si se quere saber un poco mas sobre ella, se presiona el poster y en un modal se puede leer más información de la misma.
 
+### Proceso de instalación.
+1. Se debe entrar al [repositorio](https://github.com/MirEnovi/cdmx20181-Track-FE-themovieapi).
+2. Se debe Folkear el repositorio.
+3. Se debe clonar el repositorio.
+4. Se debe abrir la terminal bash y dar _git clone_.
+5. Con git remote -v agregando la liga de este repositorio, podran hacer fetch y merge de los cambios mpas recientes.
+6. Se hace npm init, para crear el pack.json.
+7. npm install para instalar los node_modules, con sus dependencias.
+
+
+
+## Descripción del Caso de Estudio.
 Has decidido entrar a una startup que se relaciona con la industria cinematográfica. Tienes una entrevista técnica en dos días y por ello, decides 
 crear un blog para reforzar tu portafolio enfocado a este sector.
 
