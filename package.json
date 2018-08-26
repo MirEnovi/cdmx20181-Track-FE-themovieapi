@@ -2,7 +2,7 @@
   "name": "cdmx20181-track-fe-themovieapi",
   "version": "1.0.0",
   "description": "extrae y pinta peliculas",
-  "main": "index.js",
+  "main": "login.js",
   "directories": {
     "doc": "docs"
   },

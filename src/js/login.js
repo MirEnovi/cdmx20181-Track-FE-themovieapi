@@ -7,7 +7,7 @@ const login = () => {
     var token = result.credential.accessToken;
     // The signed-in user info.
     var user = result.user;
-    location.href = 'views/index.html';
+    location.href = 'views/Blog.html';
     // ...
   }).catch(function(error) {
     // Handle Errors here.
